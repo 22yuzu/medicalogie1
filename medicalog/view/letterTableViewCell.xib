@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="letterTableViewCell" customModule="medicalog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-sA-Taf">
+                        <rect key="frame" x="15" y="15" width="295" height="60"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exm-P3-neV" customClass="shadowView" customModule="medicalog" customModuleProvider="target">
+                        <rect key="frame" x="15" y="15" width="295" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQc-8D-Rkt">
+                                <rect key="frame" x="8" y="7" width="279" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="H5j-sA-Taf" secondAttribute="trailing" constant="15" id="2JW-hp-ltC"/>
+                    <constraint firstItem="H5j-sA-Taf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="B1R-z6-vLU"/>
+                    <constraint firstItem="H5j-sA-Taf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="K0Q-3c-lEg"/>
+                    <constraint firstItem="exm-P3-neV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="cER-cz-Uub"/>
+                    <constraint firstAttribute="bottom" secondItem="exm-P3-neV" secondAttribute="bottom" constant="15" id="eQ4-YD-XpS"/>
+                    <constraint firstItem="exm-P3-neV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="l92-Br-Ltz"/>
+                    <constraint firstAttribute="trailing" secondItem="exm-P3-neV" secondAttribute="trailing" constant="15" id="qyn-Hc-q0U"/>
+                    <constraint firstAttribute="bottom" secondItem="H5j-sA-Taf" secondAttribute="bottom" constant="15" id="waH-Sp-tW8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="letterName" destination="XQc-8D-Rkt" id="eQu-9D-xfv"/>
+                <outlet property="mainBackground" destination="H5j-sA-Taf" id="xJt-Vv-LWg"/>
+                <outlet property="shadowLayer" destination="exm-P3-neV" id="lDh-Yx-Bx1"/>
+            </connections>
+            <point key="canvasLocation" x="141.30434782608697" y="93.080357142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

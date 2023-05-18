@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="familyCellTableViewCell" customModule="medicalog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90t-ZM-pVD">
+                        <rect key="frame" x="10" y="10" width="305" height="90"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNG-GT-hkO" customClass="shadowView" customModule="medicalog" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="305" height="90"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftP-KT-FS1">
+                                <rect key="frame" x="8" y="18" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="26"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07H-Qb-Xtg">
+                                <rect key="frame" x="68" y="18" width="237" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                <color key="textColor" red="0.106587124854019" green="0.10207718836372368" blue="0.085943891718585588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bNG-GT-hkO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3WK-XG-6uI"/>
+                    <constraint firstAttribute="trailing" secondItem="bNG-GT-hkO" secondAttribute="trailing" constant="10" id="Kqh-BQ-0tx"/>
+                    <constraint firstItem="90t-ZM-pVD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="U7t-Tn-5Di"/>
+                    <constraint firstAttribute="bottom" secondItem="90t-ZM-pVD" secondAttribute="bottom" constant="10" id="UEJ-nV-ay1"/>
+                    <constraint firstItem="bNG-GT-hkO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="V2Z-MK-h8v"/>
+                    <constraint firstAttribute="trailing" secondItem="90t-ZM-pVD" secondAttribute="trailing" constant="10" id="vfO-EJ-AKA"/>
+                    <constraint firstAttribute="bottom" secondItem="bNG-GT-hkO" secondAttribute="bottom" constant="10" id="vtA-Oh-iv7"/>
+                    <constraint firstItem="90t-ZM-pVD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wNF-Og-vXw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mainBackground" destination="90t-ZM-pVD" id="HqN-6X-b5r"/>
+                <outlet property="profileImage" destination="ftP-KT-FS1" id="D81-61-zY6"/>
+                <outlet property="shadowLayer" destination="bNG-GT-hkO" id="dvd-ki-g6E"/>
+                <outlet property="userName" destination="07H-Qb-Xtg" id="UFd-DZ-rza"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="103.125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
