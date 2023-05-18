@@ -1,2 +1,2 @@
 # medicalogie1
-修正前、podの方のエラー
+修正前
